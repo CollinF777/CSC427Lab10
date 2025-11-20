@@ -1,12 +1,14 @@
 package edu.secourse.patientportalguiapp.controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class AdminController {
-    @FXML
-    private Label AdminDashboardLabel;
-
     @FXML
     private Label actionText;
 
@@ -27,6 +29,23 @@ public class AdminController {
     @FXML
     protected void onNewPatientButtonClick() {
         actionText.setText("Creating a new Patient");
+
+        try {
+            // Load the new FXML
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/edu/secourse/patientportalguiapp/create-patient-view.fxml")
+            );
+
+            Scene scene = new Scene(loader.load(), 400, 400);
+
+            Stage popup = new Stage();
+            popup.setTitle("Create Patient");
+            popup.setScene(scene);
+            popup.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
