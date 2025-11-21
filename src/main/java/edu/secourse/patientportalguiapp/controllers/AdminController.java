@@ -14,7 +14,24 @@ public class AdminController {
 
     @FXML
     protected void onDoctorSearchAptButtonClick() {
-        actionText.setText("Searching Doctor appointments");
+        actionText.setText("Searching Doctor Appointments.");
+
+        try {
+            // Load the new FXML
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/edu/secourse/patientportalguiapp/search-appt-by-doctor-view.fxml")
+            );
+
+            Scene scene = new Scene(loader.load(), 400, 400);
+
+            Stage popup = new Stage();
+            popup.setTitle("Create Patient");
+            popup.setScene(scene);
+            popup.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
