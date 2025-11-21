@@ -14,8 +14,8 @@
          <Font size="18.0" />
       </font></Label>
    <Label fx:id="actionText" textFill="#061083" />
-   <Button mnemonicParsing="false" onAction="#onDoctorSearchAptButtonClick" text="Search Appointments by Patient" />
-   <Button mnemonicParsing="false" onAction="#onPatientSearchAptButtonClick" text="Search Appointments by Doctor" />
+   <Button mnemonicParsing="false" onAction="#onPatientSearchAptButtonClick" text="Search Appointments by Patient" />
+   <Button mnemonicParsing="false" onAction="#onDoctorSearchAptButtonClick" text="Search Appointments by Doctor" />
    <Button mnemonicParsing="false" onAction="#onNewAptButtonClick" text="New Appointment" />
    <Button mnemonicParsing="false" onAction="#onNewPatientButtonClick" text="New Patient" />
     <Button mnemonicParsing="false" onAction="#onNewDoctorButtonClick" text="New Doctor" />
