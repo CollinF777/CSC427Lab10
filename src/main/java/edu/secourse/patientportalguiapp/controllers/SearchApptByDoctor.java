@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-public class SearchApptByDoctorView {
+public class SearchApptByDoctor {
     @FXML
     private Button backButton;
 
