@@ -68,6 +68,23 @@ public class AdminController {
     @FXML
     protected void onNewDoctorButtonClick() {
         actionText.setText("Creating a new Doctor");
+
+        try {
+            // Load the new FXML
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/edu/secourse/patientportalguiapp/create-doctor-view.fxml")
+            );
+
+            Scene scene = new Scene(loader.load(), 400, 400);
+
+            Stage popup = new Stage();
+            popup.setTitle("Create Doctor");
+            popup.setScene(scene);
+            popup.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
