@@ -25,7 +25,7 @@ public class AdminController {
             Scene scene = new Scene(loader.load(), 400, 400);
 
             Stage popup = new Stage();
-            popup.setTitle("Create Patient");
+            popup.setTitle("Search Doctor Appointments");
             popup.setScene(scene);
             popup.show();
 
